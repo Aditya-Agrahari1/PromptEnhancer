@@ -42,3 +42,4 @@ If you have any questions or concerns about this Privacy Policy, please contact 
 
 _Last updated: 20 May 2025_
 [Back to Top](#privacy-policy-for-prompt-enhancer)
+[Read more about Prompt Enhancer in the README](README.md)
