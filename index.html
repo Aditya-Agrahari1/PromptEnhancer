@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -313,7 +314,89 @@
             color: #2d3748;
         }
 
-        /* Final CTA */
+        /* Support Section */
+        .support {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            padding: 4rem 0;
+            color: white;
+        }
+
+        .support-content {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .support h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .support p {
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .contact-methods {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            min-width: 200px;
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+        }
+
+        .contact-text {
+            text-align: left;
+        }
+
+        .contact-text strong {
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-text span {
+            font-size: 0.875rem;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .contact-methods {
+                gap: 1rem;
+            }
+            
+            .contact-item {
+                min-width: auto;
+                width: 100%;
+                max-width: 300px;
+            }
+        }
         .final-cta {
             background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
             padding: 5rem 0;
@@ -338,7 +421,7 @@
                 padding: 3rem 0;
             }
             
-            .steps, .demo, .testimonial, .final-cta {
+            .support, .final-cta {
                 padding: 3rem 0;
             }
         }
@@ -483,6 +566,7 @@
     </section>
 
     <!-- Testimonial -->
+    <!-- Testimonial -->
     <section class="testimonial">
         <div class="container">
             <div class="fade-in">
@@ -490,6 +574,32 @@
                     "Saved me hours while working on my chatbot prompts!"
                 </div>
                 <div class="author">— Beta User</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="support">
+        <div class="container">
+            <div class="support-content fade-in">
+                <h2>Need Help? We're Here for You!</h2>
+                <p>For any questions, issues, or suggestions, reach out via:</p>
+                <div class="contact-methods">
+                    <a href="mailto:techveltrix@gmail.com" class="contact-item">
+                        <div class="contact-icon">📬</div>
+                        <div class="contact-text">
+                            <strong>Email</strong>
+                            <span>techveltrix@gmail.com</span>
+                        </div>
+                    </a>
+                    <a href="https://t.me/StarkSupportt_bot" class="contact-item" target="_blank">
+                        <div class="contact-icon">💬</div>
+                        <div class="contact-text">
+                            <strong>Telegram Bot Support</strong>
+                            <span>@StarkSupportt_bot</span>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -514,11 +624,11 @@
         const totalSlides = slides.length;
 
         function showSlide(index) {
-             
+            // Hide all slides
             slides.forEach(slide => slide.classList.remove('active'));
             indicators.forEach(indicator => indicator.classList.remove('active'));
             
-             
+            // Show current slide
             slides[index].classList.add('active');
             indicators[index].classList.add('active');
         }
@@ -528,21 +638,21 @@
             showSlide(currentSlide);
         }
 
-         
+        // Auto-advance slideshow every 3 seconds
         let slideInterval = setInterval(nextSlide, 3000);
 
-         
+        // Click handlers for indicators
         indicators.forEach((indicator, index) => {
             indicator.addEventListener('click', () => {
                 currentSlide = index;
                 showSlide(currentSlide);
-                 
+                // Reset the interval when manually clicking
                 clearInterval(slideInterval);
                 slideInterval = setInterval(nextSlide, 3000);
             });
         });
 
-       
+        // Pause slideshow on hover
         const slideshowContainer = document.querySelector('.slideshow-container');
         if (slideshowContainer) {
             slideshowContainer.addEventListener('mouseenter', () => {
@@ -554,7 +664,7 @@
             });
         }
 
-        
+        // Fade in animation on scroll
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -573,7 +683,7 @@
             observer.observe(el);
         });
 
-       
+        // Smooth hover effects for feature cards
         document.querySelectorAll('.feature-card').forEach(card => {
             card.addEventListener('mouseenter', () => {
                 card.style.transform = 'translateY(-10px) scale(1.02)';
@@ -583,11 +693,12 @@
                 card.style.transform = 'translateY(0) scale(1)';
             });
         });
- 
+
+        // CTA button click tracking (you can replace with actual analytics)
         document.querySelectorAll('.cta-button').forEach(button => {
             button.addEventListener('click', () => {
                 console.log('CTA clicked - Install button');
-                
+                // Add your analytics tracking here
             });
         });
     </script>
