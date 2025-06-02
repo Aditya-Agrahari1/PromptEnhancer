@@ -1,6 +1,7 @@
 # Prompt Enhancer
 
 [![Available on Chrome Web Store](https://img.shields.io/chrome-web-store/v/cdfaoncajcbfmbkbcopoghmelcjjjfhh)](https://chromewebstore.google.com/detail/cdfaoncajcbfmbkbcopoghmelcjjjfhh?utm_source=item-share-cb)
+[![🌐 Website](https://img.shields.io/badge/Website-PromptEnhancer-blue)](https://aditya-agrahari1.github.io/PromptEnhancer/)
 
 Prompt Enhancer is a Chrome extension that helps users instantly rewrite and improve their prompts for AI chat platforms like ChatGPT. With a single click or keyboard shortcut, your prompt is transformed to be more professional, polite, and detailed—making your AI conversations more effective and productive.
 
@@ -22,9 +23,12 @@ Prompt Enhancer is a Chrome extension that helps users instantly rewrite and imp
 ## Installation
 
 > 🧩 **Available Globally on the Chrome Web Store**  
-You can now install Prompt Enhancer directly from the Chrome Web Store with one click:
+Install Prompt Enhancer directly from the Chrome Web Store:
 
-👉 [Install from Chrome Web Store](https://chromewebstore.google.com/detail/cdfaoncajcbfmbkbcopoghmelcjjjfhh?utm_source=item-share-cb)
+👉 [**Install from Chrome Web Store**](https://chromewebstore.google.com/detail/cdfaoncajcbfmbkbcopoghmelcjjjfhh?utm_source=item-share-cb)
+
+🔗 Or explore demos and more on the  
+🌐 [**Official Website**](https://aditya-agrahari1.github.io/PromptEnhancer/)
 
 Once installed, pin the extension to your Chrome toolbar and start enhancing your prompts instantly.
 
@@ -36,8 +40,10 @@ Prompt Enhancer does **not** collect, store, or transmit any personally identifi
 
 ## Support
 
-For questions or support, please contact:  
-📧 techveltrix@gmail.com
+For any questions, issues, or suggestions, reach out via:
+
+- 📬 **Email:** techveltrix@gmail.com  
+- 💬 **Telegram Support:** [@StarkSupportt_bot](https://t.me/StarkSupportt_bot)
 
 ---
 
