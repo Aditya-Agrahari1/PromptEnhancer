@@ -62,11 +62,20 @@
             font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 800;
             margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: white;
             line-height: 1.2;
+        }
+
+        .hero h1 .rocket-emoji {
+            display: inline-block;
+            color: #ff6b6b;
+            text-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+            animation: rocketFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes rocketFloat {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-5px) rotate(2deg); }
         }
 
         .hero p {
@@ -359,7 +368,7 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content fade-in">
-                <h1>🚀 PromptEnhancer – Supercharge Your Gemini Prompts</h1>
+                <h1><span class="rocket-emoji">🚀</span> PromptEnhancer – Supercharge Your Gemini Prompts</h1>
                 <p>Make your prompts clearer, smarter, and more powerful using real-time AI-enhanced rewriting.</p>
                 <a href="https://chromewebstore.google.com/detail/cdfaoncajcbfmbkbcopoghmelcjjjfhh" class="cta-button" target="_blank">
                     <span class="rocket">🚀</span>
@@ -505,11 +514,11 @@
         const totalSlides = slides.length;
 
         function showSlide(index) {
-            // Hide all slides
+             
             slides.forEach(slide => slide.classList.remove('active'));
             indicators.forEach(indicator => indicator.classList.remove('active'));
             
-            // Show current slide
+             
             slides[index].classList.add('active');
             indicators[index].classList.add('active');
         }
@@ -519,21 +528,21 @@
             showSlide(currentSlide);
         }
 
-        // Auto-advance slideshow every 3 seconds
+         
         let slideInterval = setInterval(nextSlide, 3000);
 
-        // Click handlers for indicators
+         
         indicators.forEach((indicator, index) => {
             indicator.addEventListener('click', () => {
                 currentSlide = index;
                 showSlide(currentSlide);
-                // Reset the interval when manually clicking
+                 
                 clearInterval(slideInterval);
                 slideInterval = setInterval(nextSlide, 3000);
             });
         });
 
-        // Pause slideshow on hover
+       
         const slideshowContainer = document.querySelector('.slideshow-container');
         if (slideshowContainer) {
             slideshowContainer.addEventListener('mouseenter', () => {
@@ -545,7 +554,7 @@
             });
         }
 
-        // Fade in animation on scroll
+        
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -564,7 +573,7 @@
             observer.observe(el);
         });
 
-        // Smooth hover effects for feature cards
+       
         document.querySelectorAll('.feature-card').forEach(card => {
             card.addEventListener('mouseenter', () => {
                 card.style.transform = 'translateY(-10px) scale(1.02)';
@@ -574,12 +583,11 @@
                 card.style.transform = 'translateY(0) scale(1)';
             });
         });
-
-        // CTA button click tracking (you can replace with actual analytics)
+ 
         document.querySelectorAll('.cta-button').forEach(button => {
             button.addEventListener('click', () => {
                 console.log('CTA clicked - Install button');
-                // Add your analytics tracking here
+                
             });
         });
     </script>
