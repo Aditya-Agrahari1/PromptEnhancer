@@ -1,5 +1,7 @@
 # Prompt Enhancer
 
+[![Available on Chrome Web Store](https://img.shields.io/chrome-web-store/v/cdfaoncajcbfmbkbcopoghmelcjjjfhh)](https://chromewebstore.google.com/detail/cdfaoncajcbfmbkbcopoghmelcjjjfhh?utm_source=item-share-cb)
+
 Prompt Enhancer is a Chrome extension that helps users instantly rewrite and improve their prompts for AI chat platforms like ChatGPT. With a single click or keyboard shortcut, your prompt is transformed to be more professional, polite, and detailed—making your AI conversations more effective and productive.
 
 ## Features
@@ -19,10 +21,14 @@ Prompt Enhancer is a Chrome extension that helps users instantly rewrite and imp
 
 ## Installation
 
-1. Download the extension files (excluding any backend code).
-2. Go to `chrome://extensions/` in your Chrome browser.
-3. Enable "Developer mode" (top right).
-4. Click "Load unpacked" and select the extension folder.
+> 🧩 **Available Globally on the Chrome Web Store**  
+You can now install Prompt Enhancer directly from the Chrome Web Store with one click:
+
+👉 [Install from Chrome Web Store](https://chromewebstore.google.com/detail/cdfaoncajcbfmbkbcopoghmelcjjjfhh?utm_source=item-share-cb)
+
+Once installed, pin the extension to your Chrome toolbar and start enhancing your prompts instantly.
+
+---
 
 ## Privacy
 
@@ -31,8 +37,8 @@ Prompt Enhancer does **not** collect, store, or transmit any personally identifi
 ## Support
 
 For questions or support, please contact:  
-techveltrix@gmail.com
+📧 techveltrix@gmail.com
 
 ---
 
-**Enjoy enhanced prompts and better AI conversations!**
+**Enjoy enhanced prompts and better AI conversations! 🚀**
