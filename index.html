@@ -100,6 +100,7 @@
             transition: all 0.3s ease;
             box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);
             cursor: pointer;
+            margin-bottom: 2rem;
         }
 
         .cta-button:hover {
@@ -114,6 +115,73 @@
         @keyframes bounce {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
+        }
+
+        /* Scroll Down Button */
+        .scroll-down {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            cursor: pointer;
+            animation: scrollBounce 2s infinite;
+        }
+
+        .scroll-down-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+
+        .scroll-down-btn:hover {
+            opacity: 1;
+            transform: translateY(-5px);
+        }
+
+        .scroll-arrow {
+            width: 50px;
+            height: 50px;
+            border: 2px solid rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .scroll-down-btn:hover .scroll-arrow {
+            border-color: white;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .scroll-arrow::after {
+            content: '';
+            width: 12px;
+            height: 12px;
+            border-right: 2px solid white;
+            border-bottom: 2px solid white;
+            transform: rotate(45deg);
+            margin-top: -3px;
+        }
+
+        .scroll-text {
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @keyframes scrollBounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(-10px); }
         }
 
         /* What's New Section */
@@ -593,6 +661,10 @@
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
             }
+
+            .scroll-down {
+                bottom: 1rem;
+            }
         }
 
         /* Smooth scroll */
@@ -628,10 +700,18 @@
                 </a>
             </div>
         </div>
+        
+        <!-- Scroll Down Button -->
+        <div class="scroll-down">
+            <a href="#whats-new" class="scroll-down-btn">
+                <div class="scroll-arrow"></div>
+                <span class="scroll-text">Scroll Down</span>
+            </a>
+        </div>
     </section>
 
     <!-- What's New Section -->
-    <section class="whats-new">
+    <section id="whats-new" class="whats-new">
         <div class="container">
             <div class="whats-new-content">
                 <div class="fade-in">
@@ -736,6 +816,7 @@
     </section>
 
     <!-- Demo Section -->
+    <!-- Demo Section -->
     <section class="demo">
         <div class="container">
             <h2 class="section-title fade-in">See It In Action</h2>
@@ -813,28 +894,6 @@
                         </div>
                     </a>
                     <a href="https://t.me/StarkSupportt_bot" class="contact-item" target="_blank">
-                        <div class="contact-icon">💬</div>
-                        <div class="contact-text">
-                            <strong>Telegram Support</strong>
-                            <span>@StarkSupportt_bot</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="final-cta">
-        <div class="container">
-            <div class="fade-in">
-                <h2>Ready to prompt smarter? 👇</h2>
-                <a href="https://chromewebstore.google.com/detail/cdfaoncajcbfmbkbcopoghmelcjjjfhh" class="cta-button" target="_blank">
-                    Install Now – It's Free
-                </a>
-            </div>
-        </div>
-    </section>
 
     <script>
         // Slideshow functionality
@@ -858,8 +917,8 @@
             showSlide(currentSlide);
         }
 
-        // Auto-advance slideshow every 4 seconds
-        let slideInterval = setInterval(nextSlide, 4000);
+        // Auto-advance slideshow every 3 seconds
+        let slideInterval = setInterval(nextSlide, 3000);
 
         // Click handlers for indicators
         indicators.forEach((indicator, index) => {
@@ -868,7 +927,7 @@
                 showSlide(currentSlide);
                 // Reset the interval when manually clicking
                 clearInterval(slideInterval);
-                slideInterval = setInterval(nextSlide, 4000);
+                slideInterval = setInterval(nextSlide, 3000);
             });
         });
 
@@ -880,17 +939,45 @@
             });
             
             slideshowContainer.addEventListener('mouseleave', () => {
-                slideInterval = setInterval(nextSlide, 4000);
+                slideInterval = setInterval(nextSlide, 3000);
             });
         }
-
-        // Initialize slideshow when page loads
-        document.addEventListener('DOMContentLoaded', () => {
-            showSlide(0);
-            slideInterval = setInterval(nextSlide, 4000);
-        });
 
         // Fade in animation on scroll
         const observerOptions = {
             threshold: 0.1,
-            rootMargin: '0px 0px -50px
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
+        });
+
+        // Smooth hover effects for feature cards
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // CTA button click tracking (you can replace with actual analytics)
+        document.querySelectorAll('.cta-button').forEach(button => {
+            button.addEventListener('click', () => {
+                console.log('CTA clicked - Install button');
+                // Add your analytics tracking here
+            });
+        });
+    </script>
