@@ -160,12 +160,13 @@
             display: inline-block;
             background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
             color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
             animation: pulse 2s infinite;
+            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);
         }
 
         @keyframes pulse {
@@ -857,8 +858,8 @@
             showSlide(currentSlide);
         }
 
-        // Auto-advance slideshow every 3 seconds
-        let slideInterval = setInterval(nextSlide, 3000);
+        // Auto-advance slideshow every 4 seconds
+        let slideInterval = setInterval(nextSlide, 4000);
 
         // Click handlers for indicators
         indicators.forEach((indicator, index) => {
@@ -867,7 +868,7 @@
                 showSlide(currentSlide);
                 // Reset the interval when manually clicking
                 clearInterval(slideInterval);
-                slideInterval = setInterval(nextSlide, 3000);
+                slideInterval = setInterval(nextSlide, 4000);
             });
         });
 
@@ -879,9 +880,15 @@
             });
             
             slideshowContainer.addEventListener('mouseleave', () => {
-                slideInterval = setInterval(nextSlide, 3000);
+                slideInterval = setInterval(nextSlide, 4000);
             });
         }
+
+        // Initialize slideshow when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            showSlide(0);
+            slideInterval = setInterval(nextSlide, 4000);
+        });
 
         // Fade in animation on scroll
         const observerOptions = {
