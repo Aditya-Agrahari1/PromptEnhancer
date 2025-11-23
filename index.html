@@ -306,6 +306,23 @@
             z-index: 2;
         }
 
+        .mode-card .new-feature-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            color: white;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+            z-index: 3;
+            animation: pulse 2s infinite;
+        }
+
         .updates-list {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(20px);
@@ -716,47 +733,68 @@
             <div class="whats-new-content">
                 <div class="fade-in">
                     <div class="new-badge">✨ What's New</div>
-                    <h2>🪄Prompt Enhancer</h2>
-                    <h2>Enhanced with New Modes</h2>
-                    <p class="subtitle">Choose the perfect enhancement style for your needs</p>
+                    <h2>🧭 Chat Navigator</h2>
+                    <h2>Navigate Your Conversations with Ease</h2>
+                    <p class="subtitle">Smart sidebar with powerful navigation features</p>
                 </div>
                 
                 <div class="enhancement-modes">
                     <div class="mode-card fade-in">
-                        <span class="mode-icon">✨</span>
-                        <h3>Concise</h3>
-                        <p>Perfect for quick, direct prompts that get straight to the point without unnecessary details.</p>
+                        <span class="mode-icon">📑</span>
+                        <h3>Auto Table of Contents</h3>
+                        <p>Automatically generated navigation for all prompts and responses in your conversation.</p>
                     </div>
                     <div class="mode-card fade-in">
-                        <span class="mode-icon">📚</span>
-                        <h3>Detailed</h3>
-                        <p>Comprehensive prompts with rich context and specific instructions for complex tasks.</p>
+                        <span class="mode-icon">🔍</span>
+                        <h3>Search & Filter</h3>
+                        <p>Quickly find specific messages in long conversations with powerful search functionality.</p>
                     </div>
                     <div class="mode-card fade-in">
-                        <span class="mode-icon">🎨</span>
-                        <h3>Creative</h3>
-                        <p>Imaginative and inspiring prompts designed to unlock AI's creative potential.</p>
+                        <span class="mode-icon">👀</span>
+                        <h3>Smart Peeking</h3>
+                        <p>Hover over any entry to instantly preview message content without scrolling.</p>
                     </div>
                     <div class="mode-card fade-in">
-                        <span class="mode-icon">🧑‍⚖️</span>
-                        <h3>Formal</h3>
-                        <p>Professional, structured prompts ideal for business and academic applications.</p>
+                        <span class="mode-icon">⚡</span>
+                        <h3>Smooth Navigation</h3>
+                        <p>Effortless scroll-to-message with native theme support for ChatGPT and Gemini.</p>
+                    </div>
+                    <div class="mode-card fade-in">
+                        <span class="mode-icon">🔒</span>
+                        <h3>Privacy First</h3>
+                        <p>Full local processing ensures your conversations stay private with zero data collection.</p>
                     </div>
                 </div>
 
                 <div class="updates-list fade-in">
                     <h3>Recent Updates</h3>
                     <div class="update-item">
+                        <span class="update-icon">🧭</span>
+                        <div class="update-text">New Chat Navigator sidebar with auto-generated table of contents for all prompts in your conversation</div>
+                    </div>
+                    <div class="update-item">
+                        <span class="update-icon">🔍</span>
+                        <div class="update-text">Search and filter functionality to quickly find specific messages in long conversations</div>
+                    </div>
+                    <div class="update-item">
+                        <span class="update-icon">👀</span>
+                        <div class="update-text">Smart Peeking feature lets you hover over any entry to preview message content instantly</div>
+                    </div>
+                    <div class="update-item">
+                        <span class="update-icon">⚡</span>
+                        <div class="update-text">Smooth scroll-to-message navigation for effortless conversation browsing</div>
+                    </div>
+                    <div class="update-item">
                         <span class="update-icon">🎨</span>
-                        <div class="update-text">Improved creative mode language output for more inspiring and imaginative results</div>
+                        <div class="update-text">Native theme support seamlessly matches ChatGPT and Gemini's design language</div>
+                    </div>
+                    <div class="update-item">
+                        <span class="update-icon">🔒</span>
+                        <div class="update-text">Full local processing ensures your conversations stay private with zero data collection</div>
                     </div>
                     <div class="update-item">
                         <span class="update-icon">✨</span>
                         <div class="update-text">UX improvements and bug fixes for smoother user experience</div>
-                    </div>
-                    <div class="update-item">
-                        <span class="update-icon">🔧</span>
-                        <div class="update-text">Enhanced mode selection interface with better visual feedback</div>
                     </div>
                 </div>
             </div>
@@ -873,122 +911,3 @@
         <div class="container">
             <div class="fade-in">
                 <div class="quote">
-                    "Saved me hours while working on my chatbot prompts!"
-                </div>
-                <div class="author">— Beta User</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Support Section -->
-    <section class="support">
-        <div class="container">
-            <div class="support-content fade-in">
-                <h2>Need Help? We're Here for You!</h2>
-                <p>For any questions, issues, or suggestions, reach out via:</p>
-                <div class="contact-methods">
-                    <a href="mailto:techveltrix@gmail.com" class="contact-item">
-                        <div class="contact-icon">📬</div>
-                        <div class="contact-text">
-                            <strong>Email</strong>
-                            <span>techveltrix@gmail.com</span>
-                        </div>
-                    </a>
-                    <a href="https://t.me/StarkSupportt_bot" class="contact-item" target="_blank">
-                        <div class="contact-icon">💬</div>
-                        <div class="contact-text">
-                            <strong>Telegram Support</strong>
-                            <span>@StarkSupportt_bot</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <script>
-        // Slideshow functionality
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slide');
-        const indicators = document.querySelectorAll('.indicator');
-        const totalSlides = slides.length;
-
-        function showSlide(index) {
-            // Hide all slides
-            slides.forEach(slide => slide.classList.remove('active'));
-            indicators.forEach(indicator => indicator.classList.remove('active'));
-            
-            // Show current slide
-            slides[index].classList.add('active');
-            indicators[index].classList.add('active');
-        }
-
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            showSlide(currentSlide);
-        }
-
-        // Auto-advance slideshow every 3 seconds
-        let slideInterval = setInterval(nextSlide, 3000);
-
-        // Click handlers for indicators
-        indicators.forEach((indicator, index) => {
-            indicator.addEventListener('click', () => {
-                currentSlide = index;
-                showSlide(currentSlide);
-                // Reset the interval when manually clicking
-                clearInterval(slideInterval);
-                slideInterval = setInterval(nextSlide, 3000);
-            });
-        });
-
-        // Pause slideshow on hover
-        const slideshowContainer = document.querySelector('.slideshow-container');
-        if (slideshowContainer) {
-            slideshowContainer.addEventListener('mouseenter', () => {
-                clearInterval(slideInterval);
-            });
-            
-            slideshowContainer.addEventListener('mouseleave', () => {
-                slideInterval = setInterval(nextSlide, 3000);
-            });
-        }
-
-        // Fade in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animationPlayState = 'running';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            el.style.animationPlayState = 'paused';
-            observer.observe(el);
-        });
-
-        // Smooth hover effects for feature cards
-        document.querySelectorAll('.feature-card').forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                card.style.transform = 'translateY(-10px) scale(1.02)';
-            });
-            
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'translateY(0) scale(1)';
-            });
-        });
-
-        
-        document.querySelectorAll('.cta-button').forEach(button => {
-            button.addEventListener('click', () => {
-                console.log('CTA clicked - Install button');
-    
-            });
-        });
-    </script>
