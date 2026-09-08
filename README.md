@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="extension/icons/icon128.png" alt="Keen" width="80" />
+  <img src="web/images/keen.png" alt="Keen" width="80" />
 </p>
 
 <h1 align="center">Keen</h1>
